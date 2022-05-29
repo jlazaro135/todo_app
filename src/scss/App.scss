@@ -1,0 +1,155 @@
+@import './node_modules/bootstrap/scss/bootstrap-grid';
+@import './node_modules/bootstrap/scss/bootstrap-utilities';
+@import './node_modules/bootstrap/scss/bootstrap-reboot';
+@import './node_modules/bootstrap/scss/buttons';
+
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.wrapper{
+  font-family: 'catamaran', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 10px ), repeating-linear-gradient( #d1e3ff55, #d1e3ff );
+  header{
+
+  }
+  & main{
+    margin-top: auto;
+    padding: 2rem 0;
+    .taskContainer{
+      min-height: 50vh;
+      background-color: #fafafa;
+      max-width: 700px;
+      margin: 0 auto;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 50px 20px #0456ba28;
+      header{
+        form{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          gap: 1rem;
+          border-bottom: 1px solid #cacaca;
+          padding: 1rem;
+          input{
+            flex: 1 0 auto;
+          }
+          button{
+            flex: 0 1 auto;
+          }
+        }
+        p{
+          background: #0456ba;
+          padding: 1rem 0;
+          font-weight: 500;
+          color: #fff;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          span{
+            padding: 0 0.5rem;
+            border-radius: 5px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+      main{
+        display: flex;
+        flex-flow: column;
+        padding: 0;
+        .task-item{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding:1rem;
+          border-bottom: 1px solid #cacaca;
+          &__text{
+            margin: 0;
+            padding-right: 1rem;
+            text-align: left;
+            border-right: 1px solid #cacaca;
+            flex: 1 0 auto;
+          }
+          &__buttons{
+            display: flex;
+            align-items: center;
+            gap:1rem;
+            padding-left: 1rem;
+            .done, .delete{
+              padding: 0.5rem;
+              border-radius: 5px;
+              background-color: transparent;
+              border: 0;
+            }
+            .done{
+              color: $success;
+              &:hover{
+                background-color: $success;
+                color: #fff;
+                transition: all ease-out 0.2s;
+              }
+            }
+            .delete{
+              color: $danger;
+              &:hover{
+                background-color: $danger;
+                color: #fff;
+                transition: all ease-out 0.2s;
+              }
+            }
+          }
+        }
+        .empty-item{
+          margin: auto;
+          padding-top: 5rem;
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  footer{
+    margin-top: auto;
+    figure{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-height: 75px;
+        max-width: 75px;
+      }
+      figcaption{
+        text-align: left;
+        color:#414141;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+  
