@@ -8,7 +8,7 @@ function TaskBody({tasks, taskDone, taskRemove}){
             {tasks.map((task, index) => (
               <TaskItem
                 description={task.task}
-                key={`${task}-${index}`}
+                key={task.id}
                 onClickDone={() => taskDone(index)}
                 onClickRemove={() => taskRemove(index)}
                 success= {task.completed ? '-success' : ''}

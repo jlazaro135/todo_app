@@ -51,7 +51,7 @@ function TaskContainer({
     function taskDone(indexToDone){
         const clonedTasks = [...tasks];
         const task = clonedTasks[indexToDone];
-        task.completed = true;
+        task.completed ^= true;
         setTask(clonedTasks);
     }
 
