@@ -15,7 +15,7 @@ function TaskBody({tasks, taskDone, taskRemove}){
               />
             ))}
             {tasks.length === 0 && (
-              <p className="empty-item">Hurra! 🎉🎉</p>
+              <p className="empty-item material-symbols-outlined">Hurra! 🎉🎉</p>
             )}
         </main>
     );
