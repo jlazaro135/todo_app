@@ -2,7 +2,7 @@ import React from 'react';
 
 function TaskItem({description, onClickRemove, onClickDone, success}){
     return(
-        <div className={'task-item' +' '+ ' task-item'+success}>
+        <div className={'task-item task-item'+success}>
             <p className='task-item__text'>
                 {description}
             </p>
